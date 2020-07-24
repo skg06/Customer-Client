@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers</ion-title>
+    <div>
+        
+    </div>
+    <div class="ion-text-end">
+        <input
+          #search
+          id="search"
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="basic-addon1"
+        />
+      <ion-button  fill="solid" size="default" color="success" (click)="navigate()">Add Customer</ion-button>
+  </div>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    
+  <div class="ion-padding">
+    <ngx-datatable 
+      #table
+      class="material"
+      [limit]="8" 
+      [rows]="customers" 
+      [rowHeight]="50" 
+      [columns]="columns"
+      [columnMode]="'force'" 
+      [sortType]="'multi'" 
+      [headerHeight]="50" 
+      [footerHeight]="50">
+    </ngx-datatable>
+
+  </div>
+</ion-content>
